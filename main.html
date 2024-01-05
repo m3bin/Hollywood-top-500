@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html><head><title>Python: module main</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head><body bgcolor="#f0f0f8">
+
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
+<tr bgcolor="#7799ee">
+<td valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>main</strong></big></big></font></td
+><td align=right valign=bottom
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/mebinmathew/PycharmProjects/exploraroryDataAnalysis/main.py">/Users/mebinmathew/PycharmProjects/exploraroryDataAnalysis/main.py</a></font></td></tr></table>
+    <p><tt>Created&nbsp;on&nbsp;Tue&nbsp;Dec&nbsp;10&nbsp;14:55:52&nbsp;2023<br>
+&nbsp;<br>
+@author:&nbsp;A00315995<br>
+&nbsp;<br>
+#&nbsp;Program&nbsp;Name:&nbsp;main.py<br>
+#&nbsp;purpose:&nbsp;This&nbsp;program&nbsp;reads&nbsp;a&nbsp;dataset&nbsp;containing&nbsp;500&nbsp;of&nbsp;the&nbsp;most&nbsp;profitable&nbsp;hollywood&nbsp;movies&nbsp;from&nbsp;1970's&nbsp;till&nbsp;the&nbsp;2020's&nbsp;and&nbsp;performs&nbsp;statistical&nbsp;and&nbsp;visual&nbsp;analysis&nbsp;on&nbsp;it.</tt></p>
+<p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#aa55cc">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Modules</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#aa55cc"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><table width="100%" summary="list"><tr><td width="25%" valign=top><a href="matplotlib.pyplot.html">matplotlib.pyplot</a><br>
+</td><td width="25%" valign=top><a href="sys.html">sys</a><br>
+</td><td width="25%" valign=top></td><td width="25%" valign=top></td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#eeaa77">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Functions</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#eeaa77"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><dl><dt><a name="-calculate_correlation"><strong>calculate_correlation</strong></a>(budget_list, gross_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;correlation&nbsp;coefficient&nbsp;between&nbsp;two&nbsp;sets&nbsp;of&nbsp;numerical&nbsp;data,&nbsp;'budget_list'&nbsp;and&nbsp;'gross_list',&nbsp;using&nbsp;the&nbsp;Pearson&nbsp;correlation&nbsp;formula.&nbsp;<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values&nbsp;representing&nbsp;movie&nbsp;budgets.<br>
+gross_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values&nbsp;representing&nbsp;worldwide&nbsp;gross&nbsp;earnings.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;correlation&nbsp;coefficient&nbsp;between&nbsp;the&nbsp;provided&nbsp;lists.</tt></dd></dl>
+ <dl><dt><a name="-calculate_interquartile"><strong>calculate_interquartile</strong></a>(data_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;interquartile&nbsp;range&nbsp;(IQR)&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;interquartile&nbsp;range&nbsp;(IQR)&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-calculate_mean"><strong>calculate_mean</strong></a>(data_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;mean&nbsp;(average)&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;mean&nbsp;(average)&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-calculate_median"><strong>calculate_median</strong></a>(data_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;median&nbsp;(middle&nbsp;value)&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;median&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-calculate_mode"><strong>calculate_mode</strong></a>(data_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;mode&nbsp;(most&nbsp;frequently&nbsp;occurring&nbsp;value)&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;or&nbsp;categorical&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;mode&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-calculate_range"><strong>calculate_range</strong></a>(data_list)</dt><dd><tt>Calculate&nbsp;the&nbsp;range&nbsp;of&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numerical&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;range&nbsp;of&nbsp;the&nbsp;data,&nbsp;rounded&nbsp;to&nbsp;two&nbsp;decimal&nbsp;places.</tt></dd></dl>
+ <dl><dt><a name="-calculate_skewness"><strong>calculate_skewness</strong></a>(data_list, flag)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;Pearson&nbsp;Mode&nbsp;Skewness&nbsp;or&nbsp;Alternative&nbsp;Pearson&nbsp;Mode&nbsp;Skewness&nbsp;measure&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;skewness&nbsp;measure&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-calculate_std_deviation"><strong>calculate_std_deviation</strong></a>(data_list)</dt><dd><tt>This&nbsp;function&nbsp;computes&nbsp;the&nbsp;standard&nbsp;deviation&nbsp;for&nbsp;a&nbsp;given&nbsp;list&nbsp;of&nbsp;numerical&nbsp;data.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+data_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;numeric&nbsp;values..<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+float<br>
+&nbsp;&nbsp;&nbsp;&nbsp;The&nbsp;standard&nbsp;deviation&nbsp;of&nbsp;the&nbsp;provided&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-category_highest_gross"><strong>category_highest_gross</strong></a>(decade_numerical_dict)</dt><dd><tt>This&nbsp;function&nbsp;iterates&nbsp;through&nbsp;the&nbsp;input&nbsp;dictionary,&nbsp;computes&nbsp;the&nbsp;total&nbsp;gross&nbsp;earnings&nbsp;for&nbsp;each&nbsp;decade,&nbsp;and&nbsp;identifies&nbsp;the&nbsp;decade&nbsp;with&nbsp;the&nbsp;highest&nbsp;total&nbsp;gross&nbsp;earnings.<br>
+It&nbsp;then&nbsp;prints&nbsp;the&nbsp;decade&nbsp;and&nbsp;its&nbsp;total&nbsp;gross&nbsp;in&nbsp;billion&nbsp;USD.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;where&nbsp;keys&nbsp;represent&nbsp;decades&nbsp;and&nbsp;values&nbsp;are&nbsp;lists&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-category_lowest_gross"><strong>category_lowest_gross</strong></a>(decade_numerical_dict)</dt><dd><tt>This&nbsp;function&nbsp;iterates&nbsp;through&nbsp;the&nbsp;input&nbsp;dictionary,&nbsp;computes&nbsp;the&nbsp;total&nbsp;gross&nbsp;earnings&nbsp;for&nbsp;each&nbsp;decade,&nbsp;and&nbsp;identifies&nbsp;the&nbsp;decade&nbsp;with&nbsp;the&nbsp;lowest&nbsp;total&nbsp;gross&nbsp;earnings.<br>
+It&nbsp;then&nbsp;prints&nbsp;the&nbsp;decade&nbsp;and&nbsp;its&nbsp;total&nbsp;gross&nbsp;in&nbsp;billion&nbsp;USD.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;where&nbsp;keys&nbsp;represent&nbsp;decades&nbsp;and&nbsp;values&nbsp;are&nbsp;lists&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;values.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-display_menu"><strong>display_menu</strong></a>()</dt><dd><tt>The&nbsp;function&nbsp;loads&nbsp;data&nbsp;including&nbsp;budget,&nbsp;worldwide&nbsp;gross,&nbsp;title,&nbsp;decade&nbsp;frequency<br>
+dictionary,&nbsp;and&nbsp;decade&nbsp;numerical&nbsp;dictionary.&nbsp;It&nbsp;presents&nbsp;a&nbsp;menu&nbsp;to&nbsp;perform&nbsp;various<br>
+analyses&nbsp;and&nbsp;visualizations&nbsp;based&nbsp;on&nbsp;user&nbsp;selections.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-load_dataset"><strong>load_dataset</strong></a>()</dt><dd><tt>This&nbsp;function&nbsp;reads&nbsp;the&nbsp;dataset&nbsp;file&nbsp;'dataset.csv',&nbsp;extracts&nbsp;movie&nbsp;information,<br>
+including&nbsp;budget,&nbsp;worldwide&nbsp;gross,&nbsp;and&nbsp;title.&nbsp;It&nbsp;organizes&nbsp;this&nbsp;information&nbsp;into&nbsp;lists<br>
+and&nbsp;dictionaries&nbsp;categorized&nbsp;by&nbsp;decade,&nbsp;storing&nbsp;frequencies&nbsp;and&nbsp;worldwide&nbsp;gross&nbsp;for&nbsp;each&nbsp;decade.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+budget&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;movie&nbsp;budgets.<br>
+worldwide_gross&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;earnings&nbsp;for&nbsp;movies.<br>
+title&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;movie&nbsp;titles.<br>
+decade_freq_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;per&nbsp;decade.<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;associated&nbsp;worldwide&nbsp;gross&nbsp;data.</tt></dd></dl>
+ <dl><dt><a name="-show_barchart"><strong>show_barchart</strong></a>(decade_freq_dict)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;as&nbsp;values.&nbsp;<br>
+It&nbsp;generates&nbsp;a&nbsp;horizontal&nbsp;bar&nbsp;chart&nbsp;to&nbsp;visualize&nbsp;the&nbsp;frequency&nbsp;of&nbsp;profitable&nbsp;movies&nbsp;for&nbsp;each&nbsp;decade.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+decade_freq_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;where&nbsp;keys&nbsp;represent&nbsp;decades&nbsp;and&nbsp;values&nbsp;denote&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_budget_boxplot"><strong>show_budget_boxplot</strong></a>(budget_list)</dt><dd><tt>This&nbsp;function&nbsp;creates&nbsp;a&nbsp;box&nbsp;plot&nbsp;displaying&nbsp;the&nbsp;distribution&nbsp;of&nbsp;budgets&nbsp;for&nbsp;movies.<br>
+The&nbsp;'budget_list'&nbsp;parameter&nbsp;contains&nbsp;the&nbsp;data&nbsp;points&nbsp;for&nbsp;the&nbsp;box&nbsp;plot.<br>
+The&nbsp;plot&nbsp;shows&nbsp;the&nbsp;median,&nbsp;quartiles,&nbsp;and&nbsp;excludes&nbsp;outliers&nbsp;of&nbsp;the&nbsp;budget&nbsp;values.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;budget&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD).<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_budget_histogram"><strong>show_budget_histogram</strong></a>(budget_list)</dt><dd><tt>This&nbsp;function&nbsp;creates&nbsp;a&nbsp;histogram&nbsp;displaying&nbsp;the&nbsp;distribution&nbsp;of&nbsp;budgets&nbsp;for&nbsp;movies.<br>
+The&nbsp;'budget_list'&nbsp;parameter&nbsp;contains&nbsp;the&nbsp;data&nbsp;points&nbsp;for&nbsp;the&nbsp;histogram.<br>
+The&nbsp;plot&nbsp;shows&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;within&nbsp;certain&nbsp;budget&nbsp;ranges.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;containing&nbsp;budget&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD)&nbsp;for&nbsp;movies.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_category_boxplot"><strong>show_category_boxplot</strong></a>(decade_numerical_dict)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;corresponding&nbsp;worldwide&nbsp;gross&nbsp;as&nbsp;values.<br>
+It&nbsp;then&nbsp;generates&nbsp;a&nbsp;boxplot&nbsp;to&nbsp;visualize&nbsp;the&nbsp;distribution&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;for&nbsp;each&nbsp;decade&nbsp;without&nbsp;displaying&nbsp;outliers.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;where&nbsp;keys&nbsp;represent&nbsp;decades&nbsp;and&nbsp;values&nbsp;are&nbsp;worldwide&nbsp;gross&nbsp;list.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_gross_boxplot"><strong>show_gross_boxplot</strong></a>(gross_list)</dt><dd><tt>This&nbsp;function&nbsp;creates&nbsp;a&nbsp;box&nbsp;plot&nbsp;displaying&nbsp;the&nbsp;distribution&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;for&nbsp;movies.&nbsp;<br>
+The&nbsp;'gross_list'&nbsp;parameter&nbsp;contains&nbsp;the&nbsp;data&nbsp;points&nbsp;for&nbsp;the&nbsp;box&nbsp;plot.<br>
+The&nbsp;plot&nbsp;shows&nbsp;the&nbsp;median,&nbsp;quartiles,&nbsp;and&nbsp;excludes&nbsp;outliers&nbsp;of&nbsp;the&nbsp;gross&nbsp;values.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+gross_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD).<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_gross_histogram"><strong>show_gross_histogram</strong></a>(gross_list)</dt><dd><tt>This&nbsp;function&nbsp;creates&nbsp;a&nbsp;histogram&nbsp;displaying&nbsp;the&nbsp;distribution&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;for&nbsp;movies.&nbsp;<br>
+The&nbsp;'gross_list'&nbsp;parameter&nbsp;contains&nbsp;the&nbsp;data&nbsp;points&nbsp;for&nbsp;the&nbsp;histogram.<br>
+The&nbsp;plot&nbsp;shows&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;within&nbsp;certain&nbsp;gross&nbsp;ranges.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+gross_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD).<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_piechart"><strong>show_piechart</strong></a>(decade_freq_dict)</dt><dd><tt>This&nbsp;function&nbsp;takes&nbsp;a&nbsp;dictionary&nbsp;containing&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;as&nbsp;values.<br>
+It&nbsp;generates&nbsp;a&nbsp;pie&nbsp;chart&nbsp;to&nbsp;visualize&nbsp;the&nbsp;percentage&nbsp;distribution&nbsp;of&nbsp;movies&nbsp;for&nbsp;each&nbsp;decade&nbsp;among&nbsp;the&nbsp;most&nbsp;profitable&nbsp;movies.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+decade_freq_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;where&nbsp;keys&nbsp;represent&nbsp;decades&nbsp;and&nbsp;values&nbsp;denote&nbsp;the&nbsp;frequency&nbsp;of&nbsp;movies.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-show_scatterplot"><strong>show_scatterplot</strong></a>(budget_list, gross_list)</dt><dd><tt>This&nbsp;function&nbsp;creates&nbsp;a&nbsp;scatter&nbsp;plot&nbsp;displaying&nbsp;the&nbsp;relationship&nbsp;between&nbsp;budget&nbsp;and&nbsp;worldwide&nbsp;gross.&nbsp;<br>
+It&nbsp;plots&nbsp;the&nbsp;values&nbsp;from&nbsp;the&nbsp;'budget_list'&nbsp;on&nbsp;the&nbsp;x-axis&nbsp;and&nbsp;the&nbsp;values&nbsp;from&nbsp;the&nbsp;'gross_list'&nbsp;on&nbsp;the&nbsp;y-axis.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;budget&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD).<br>
+gross_list&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;values&nbsp;(in&nbsp;million&nbsp;USD).<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-sqrt"><strong>sqrt</strong></a>(x, /)</dt><dd><tt>Return&nbsp;the&nbsp;square&nbsp;root&nbsp;of&nbsp;x.</tt></dd></dl>
+ <dl><dt><a name="-statistical"><strong>statistical</strong></a>(budget, worldwide_gross, title, decade_freq_dict, decade_numerical_dict)</dt><dd><tt>This&nbsp;function&nbsp;provides&nbsp;statistical&nbsp;analysis&nbsp;based&nbsp;on&nbsp;numerical&nbsp;columns&nbsp;(Budgets,&nbsp;Worldwide&nbsp;Gross)<br>
+and&nbsp;categorical&nbsp;data&nbsp;(Decade).&nbsp;It&nbsp;prompts&nbsp;the&nbsp;user&nbsp;to&nbsp;select&nbsp;various&nbsp;analysis&nbsp;options&nbsp;and&nbsp;displays<br>
+computations&nbsp;accordingly.<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;movie&nbsp;budgets.<br>
+worldwide_gross&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;earnings&nbsp;for&nbsp;movies.<br>
+title&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;movie&nbsp;titles.<br>
+decade_freq_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;per&nbsp;decade.<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;associated&nbsp;worldwide&nbsp;gross&nbsp;data.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+ <dl><dt><a name="-visualisation"><strong>visualisation</strong></a>(budget, worldwide_gross, decade_freq_dict, decade_numerical_dict)</dt><dd><tt>The&nbsp;function&nbsp;continuously&nbsp;displays&nbsp;a&nbsp;menu&nbsp;to&nbsp;the&nbsp;user,&nbsp;prompting&nbsp;them&nbsp;to&nbsp;select&nbsp;from&nbsp;different<br>
+visualization&nbsp;options&nbsp;for&nbsp;both&nbsp;numerical&nbsp;(Budgets,&nbsp;Worldwide&nbsp;Gross)&nbsp;and&nbsp;categorical&nbsp;data&nbsp;(Decade).<br>
+&nbsp;<br>
+Parameters<br>
+----------<br>
+budget&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;movie&nbsp;budgets.<br>
+worldwide_gross&nbsp;:&nbsp;list<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;list&nbsp;of&nbsp;worldwide&nbsp;gross&nbsp;earnings&nbsp;for&nbsp;movies.<br>
+decade_freq_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;frequency&nbsp;of&nbsp;movies&nbsp;per&nbsp;decade.<br>
+decade_numerical_dict&nbsp;:&nbsp;dict<br>
+&nbsp;&nbsp;&nbsp;&nbsp;A&nbsp;dictionary&nbsp;with&nbsp;decades&nbsp;as&nbsp;keys&nbsp;and&nbsp;associated&nbsp;worldwide&nbsp;gross&nbsp;data.<br>
+&nbsp;<br>
+Returns<br>
+-------<br>
+None.</tt></dd></dl>
+</td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>DATASET</strong> = 'dataset.csv'</td></tr></table>
+</body></html>
